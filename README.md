@@ -12,7 +12,7 @@ CodeAlchemy is a web-based, real-time code editor designed to facilitate collabo
 
 # Installation
 ### Clone the Repository
-git clone ***<repository-url>***
+git clone ***repository-url***
 
 # Install Dependencies
 ### Client Setup:
