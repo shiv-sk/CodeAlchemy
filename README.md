@@ -12,7 +12,7 @@ CodeAlchemy is a web-based, real-time code editor designed to facilitate collabo
 
 # Installation
 ### Clone the Repository
-git clone <repository-url>
+git clone ***<repository-url>***
 
 # Install Dependencies
 ### Client Setup:
@@ -31,11 +31,11 @@ npm install<br>
 # Running the Project
 
 # Start the Client:
-cd client
+cd client<br>
 ***npm run dev***
 
 # Start the Server:
-cd server
+cd server<br>
 ***node app.js***
 
 # Folder Structure
