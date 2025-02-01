@@ -5,6 +5,9 @@ const { Server } = require('socket.io');
 const cors = require("cors");
 
 const app = express();
+app.use(cors({
+    origin:true
+}))
 const server = createServer(app);
 const io = new Server(server , {
     cors:{
@@ -53,8 +56,16 @@ io.on("connection" , (socket)=>{
         delete userSocketMap[socket];
         socket.leave();
     })
+    //messages
+    socket.on("message" , ({message})=>{
+        io.emit("message" , { message, senderId: socket.id });
+    })
 
 })
+app.use(express.json());
+const AiCode = require("./index");
+app.post("/api/v1/code/debug" , AiCode.codeDebug);
+app.post("/api/v1/code/explain" , AiCode.explainCode);
 
 server.listen(3000, () => {
   console.log('server running at http://localhost:3000');

@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 #folder
-./react-code-editor-aap
+/react-code-editor-aap
+/server/exp

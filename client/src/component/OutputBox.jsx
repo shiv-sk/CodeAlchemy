@@ -1,11 +1,11 @@
  /* eslint-disable react/prop-types */
-export default function OutputBox({output , isLoading , isError}){
+export default function OutputBox({output , isRunning , isError}){
     const val = "//click the run button to see output";
     return(
         <>
-        <div className="w-1/2 h-95vh px-4 py-2 flex bg-base-200 shadow-2xl">
+        <div className="w-1/2 h-95vh px-4 py-2 flex bg-base-200 shadow-2xl mt-6 overflow-x-auto">
             {
-                isLoading ? (
+                isRunning ? (
                 <div className="flex items-center justify-center mx-auto">
                 <span className="loading loading-spinner loading-lg"></span>
                 </div>
